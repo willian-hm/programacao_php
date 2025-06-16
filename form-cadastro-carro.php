@@ -53,6 +53,23 @@
             color: #ccc;
         }
 
+        select {
+            padding: 12px 15px;
+            background-color: #2a2a2a;
+            margin-top: 10px;
+            width: 100%;
+            border-radius: 5px;
+            color: #eee;
+            font-size: 1rem;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #888;
+            background-color: #333;
+        }
+
+
         input[type="text"],
         input[type="number"] {
             padding: 12px 15px;
@@ -99,14 +116,25 @@
                 <input type="text" id="modelo" name="modelo" placeholder="Ex: Corolla" required />
             </div>
             <div>
-                <label for="marca">Marca:</label><br>
-                <input type="text" id="marca" name="marca" placeholder="Ex: Toyota" required />
+                <label for="marca">Marca do carro</label>
+                <select id="marca" name="marca">
+                    <option value="">Selecione uma marca</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="ford">Ford</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="volkswagen">Volkswagen</option>
+                </select>
             </div>
             <div>
                 <label for="ano">Ano:</label><br>
                 <input type="text" id="ano" name="ano" placeholder="Ex: 2020" required />
             </div>
             <input type="submit" value="Enviar" />
+
         </form>
     </div>
 </body>

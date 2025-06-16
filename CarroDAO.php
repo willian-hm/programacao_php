@@ -11,4 +11,11 @@ class CarroDAO{
 
         $stmt->execute();
     }
+
+    static function consultar() {
+        $conexao = ConexaoBD::conectar();
+        $sql = "select * from carro";
+        $resultado = $conexao->query($sql);
+        return $resultado->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
